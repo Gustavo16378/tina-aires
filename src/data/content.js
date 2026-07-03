@@ -14,7 +14,10 @@ export const hero = {
   ctaPrimary: 'Falar no WhatsApp',
   ctaSecondary: 'Áreas de atuação',
   portrait: images.hero,
-  portraitAlt: 'Retrato de Tina Aires',
+  portraitAlt:
+    'Tina Aires, neuropsicopedagoga e terapeuta TRG em Porto Nacional, Tocantins',
+  portraitWidth: 900,
+  portraitHeight: 1600,
 }
 
 export const about = {
@@ -25,7 +28,10 @@ export const about = {
     'Pedagoga há mais de 20 anos, neuropsicopedagoga com ênfase no TEA, perita do Tribunal de Justiça do Tocantins e coordenadora do Complexo Regulador da Secretaria de Saúde — concursada há 29 anos. Mãe de dois, avó de três.',
   ],
   portrait: images.sobre,
-  portraitAlt: 'Tina Aires',
+  portraitAlt:
+    'Tina Aires, perita pedagógica do TJ-TO, em Porto Nacional, Tocantins',
+  portraitWidth: 900,
+  portraitHeight: 1600,
 }
 
 export const areas = {
@@ -40,10 +46,30 @@ export const palestras = {
   formats: ['Escolas', 'Equipes', 'Eventos'],
   // Fotos reais de palestras da Tina (em /public/photos).
   gallery: [
-    { src: '/photos/palestra1.jpeg', alt: 'Palestra de Tina Aires' },
-    { src: '/photos/palestra2.jpeg', alt: 'Tina Aires em evento' },
-    { src: '/photos/palestra3.jpeg', alt: 'Palestra de Tina Aires' },
-    { src: '/photos/palestra4.jpeg', alt: 'Tina Aires em evento' },
+    {
+      src: '/photos/palestra1.jpeg',
+      alt: 'Tina Aires ministrando palestra sobre desenvolvimento humano',
+      width: 960,
+      height: 1280,
+    },
+    {
+      src: '/photos/palestra2.jpeg',
+      alt: 'Tina Aires em palestra para educadores em Porto Nacional',
+      width: 1600,
+      height: 900,
+    },
+    {
+      src: '/photos/palestra3.jpeg',
+      alt: 'Tina Aires durante palestra sobre saúde emocional',
+      width: 1197,
+      height: 1600,
+    },
+    {
+      src: '/photos/palestra4.jpeg',
+      alt: 'Tina Aires em evento de desenvolvimento humano no Tocantins',
+      width: 1600,
+      height: 900,
+    },
   ],
   cta: 'Contratar uma palestra',
 }

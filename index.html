@@ -7,16 +7,20 @@
     <meta name="theme-color" content="#0F3B3A" />
 
     <!-- Favicon / ícones -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <title>Tina Aires — Neuropsicopedagogia, Terapia e Desenvolvimento Humano</title>
+    <title>Tina Aires — Neuropsicopedagogia e Terapia TRG | Porto Nacional-TO</title>
     <meta
       name="description"
-      content="Tina Aires — saúde com profundidade humana. Mais de 20 anos cuidando de pessoas em Porto Nacional, Tocantins. Terapia TRG, Neuropsicopedagogia (TEA), Perícia Pedagógica e Palestras."
+      content="Neuropsicopedagogia com ênfase em TEA, Terapia TRG, perícia pedagógica e palestras em Porto Nacional-TO. Mais de 20 anos de experiência. Agende pelo WhatsApp."
     />
+    <meta name="author" content="Tina Aires" />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://tinaaires.com.br/" />
 
     <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
@@ -26,11 +30,11 @@
     <meta property="og:url" content="https://tinaaires.com.br/" />
     <meta
       property="og:title"
-      content="Tina Aires — Neuropsicopedagogia, Terapia e Desenvolvimento Humano"
+      content="Tina Aires — Neuropsicopedagogia, Terapia TRG e Palestras"
     />
     <meta
       property="og:description"
-      content="Saúde com profundidade humana. Mais de 20 anos cuidando de pessoas em Porto Nacional, Tocantins. Terapia TRG, Neuropsicopedagogia (TEA), Perícia Pedagógica e Palestras."
+      content="Neuropsicopedagogia com ênfase em TEA, Terapia TRG, perícia pedagógica e palestras em Porto Nacional-TO. Mais de 20 anos de experiência. Agende pelo WhatsApp."
     />
     <meta property="og:image" content="https://tinaaires.com.br/photos/preview.jpeg" />
     <meta property="og:image:secure_url" content="https://tinaaires.com.br/photos/preview.jpeg" />
@@ -39,18 +43,18 @@
     <meta property="og:image:height" content="926" />
     <meta
       property="og:image:alt"
-      content="Tina Aires — Neuropsicopedagogia, Terapia e Desenvolvimento Humano"
+      content="Tina Aires — Neuropsicopedagogia, Terapia TRG e Palestras em Porto Nacional-TO"
     />
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Tina Aires — Neuropsicopedagogia, Terapia e Desenvolvimento Humano"
+      content="Tina Aires — Neuropsicopedagogia, Terapia TRG e Palestras"
     />
     <meta
       name="twitter:description"
-      content="Saúde com profundidade humana. Mais de 20 anos cuidando de pessoas em Porto Nacional, Tocantins."
+      content="Neuropsicopedagogia com ênfase em TEA, Terapia TRG, perícia pedagógica e palestras em Porto Nacional-TO. Mais de 20 anos de experiência. Agende pelo WhatsApp."
     />
     <meta name="twitter:image" content="https://tinaaires.com.br/photos/preview.jpeg" />
 
@@ -60,6 +64,58 @@
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Dados estruturados (JSON-LD) — negócio local + pessoa/autoridade -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": "https://tinaaires.com.br/#business",
+        "name": "Tina Aires — Neuropsicopedagogia e Terapia",
+        "url": "https://tinaaires.com.br/",
+        "image": "https://tinaaires.com.br/photos/preview.jpeg",
+        "description": "Neuropsicopedagogia com ênfase em TEA, Terapia TRG, perícia pedagógica e palestras em Porto Nacional-TO. Mais de 20 anos de experiência. Agende pelo WhatsApp.",
+        "telephone": "+5563991108064",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Porto Nacional",
+          "addressRegion": "TO",
+          "addressCountry": "BR"
+        },
+        "areaServed": ["Porto Nacional", "Palmas", "Tocantins"],
+        "priceRange": "$$",
+        "founder": { "@id": "https://tinaaires.com.br/#person" }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://tinaaires.com.br/#person",
+        "name": "Miraltina Aires da Silva",
+        "alternateName": "Tina Aires",
+        "url": "https://tinaaires.com.br/",
+        "image": "https://tinaaires.com.br/photos/preview.jpeg",
+        "jobTitle": "Neuropsicopedagoga e Terapeuta TRG",
+        "telephone": "+5563991108064",
+        "knowsAbout": [
+          "Neuropsicopedagogia",
+          "Transtorno do Espectro Autista (TEA)",
+          "Terapia de Reprocessamento Generativo (TRG)",
+          "Perícia sociopsicopedagógica",
+          "Palestras"
+        ],
+        "workLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Nacional",
+            "addressRegion": "TO",
+            "addressCountry": "BR"
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

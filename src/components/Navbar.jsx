@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import useScrollDirection from '../hooks/useScrollDirection'
-import { navLinks, site, whatsappMessages } from '../data/site'
+import { navLinks, site, whatsappMessages, whatsappAria } from '../data/site'
 import { buildWhatsAppLink } from '../utils/whatsapp'
 import WhatsAppIcon from './WhatsAppIcon'
 import MobileMenu from './MobileMenu'
@@ -82,6 +82,7 @@ export default function Navbar() {
             href={buildWhatsAppLink(whatsappMessages.geral)}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={whatsappAria.geral}
             className="ml-auto hidden items-center gap-2 rounded-xl bg-terracota px-[18px] py-[9px] text-[13.5px] font-semibold text-white transition-colors hover:bg-terracota-warm lg:ml-0 lg:inline-flex"
           >
             <WhatsAppIcon size={15} />
@@ -93,10 +94,13 @@ export default function Navbar() {
             type="button"
             onClick={() => setMenuOpen(true)}
             aria-label="Abrir menu"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            aria-haspopup="dialog"
             className="ml-auto inline-flex p-1 text-petrol lg:hidden"
           >
             <span className={scrolled ? 'text-petrol' : 'text-cream'}>
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">
                 <path d="M4 7h16M4 12h16M4 17h16" />
               </svg>
             </span>

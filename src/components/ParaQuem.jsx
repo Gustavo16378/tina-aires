@@ -3,13 +3,16 @@ import { audiences } from '../data/audiences'
 
 export default function ParaQuem() {
   return (
-    <section id="para-quem" className="bg-cream">
+    <section id="para-quem" aria-labelledby="para-quem-title" className="bg-cream">
       <div className="mx-auto max-w-shell px-5 py-14 sm:px-6 md:py-24">
         <div className="mb-10 max-w-[600px]">
           <p className="mb-4 text-xs uppercase tracking-[0.16em] text-terracota">
             {paraQuem.eyebrow}
           </p>
-          <h2 className="font-serif text-[clamp(30px,4.2vw,46px)] leading-[1.08] text-petrol">
+          <h2
+            id="para-quem-title"
+            className="font-serif text-[clamp(30px,4.2vw,46px)] leading-[1.08] text-petrol"
+          >
             {paraQuem.title}
           </h2>
         </div>

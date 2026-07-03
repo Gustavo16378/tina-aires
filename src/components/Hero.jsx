@@ -1,11 +1,12 @@
 import { hero } from '../data/content'
-import { whatsappMessages } from '../data/site'
+import { whatsappMessages, whatsappAria } from '../data/site'
 import { buildWhatsAppLink } from '../utils/whatsapp'
 
 export default function Hero() {
   return (
     <section
       id="top"
+      aria-labelledby="hero-title"
       className="relative flex min-h-[100svh] items-center overflow-hidden bg-petrol text-cream"
     >
       {/* Círculo decorativo */}
@@ -18,7 +19,10 @@ export default function Hero() {
             {hero.eyebrow}
           </div>
 
-          <h1 className="mb-5 font-serif text-[clamp(46px,8vw,86px)] leading-[1.0] text-cream">
+          <h1
+            id="hero-title"
+            className="mb-5 font-serif text-[clamp(46px,8vw,86px)] leading-[1.0] text-cream"
+          >
             {hero.title}
           </h1>
 
@@ -35,6 +39,7 @@ export default function Hero() {
               href={buildWhatsAppLink(whatsappMessages.geral)}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={whatsappAria.geral}
               className="inline-flex items-center gap-2.5 rounded-2xl bg-terracota px-7 py-[15px] text-[15px] font-semibold text-white shadow-[0_14px_30px_-12px_rgba(194,112,61,0.6)] transition-colors hover:bg-terracota-warm"
             >
               {hero.ctaPrimary}
@@ -56,7 +61,10 @@ export default function Hero() {
               <img
                 src={hero.portrait}
                 alt={hero.portraitAlt}
+                width={hero.portraitWidth}
+                height={hero.portraitHeight}
                 loading="eager"
+                fetchPriority="high"
                 className="h-full w-full object-cover"
               />
             </div>

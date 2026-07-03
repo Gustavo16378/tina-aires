@@ -3,13 +3,16 @@ import { credentials } from '../data/credentials'
 
 export default function Sobre() {
   return (
-    <section id="sobre" className="bg-cream">
+    <section id="sobre" aria-labelledby="sobre-title" className="bg-cream">
       <div className="mx-auto flex max-w-shell flex-wrap items-center gap-8 px-5 py-14 sm:px-6 md:gap-16 md:py-24">
         <div className="min-w-[300px] flex-1 basis-[340px]">
           <p className="mb-4 text-xs uppercase tracking-[0.16em] text-terracota">
             {about.eyebrow}
           </p>
-          <h2 className="mb-6 font-serif text-[clamp(30px,4.2vw,46px)] leading-[1.08] text-petrol">
+          <h2
+            id="sobre-title"
+            className="mb-6 font-serif text-[clamp(30px,4.2vw,46px)] leading-[1.08] text-petrol"
+          >
             {about.title}
           </h2>
 
@@ -43,6 +46,8 @@ export default function Sobre() {
             <img
               src={about.portrait}
               alt={about.portraitAlt}
+              width={about.portraitWidth}
+              height={about.portraitHeight}
               loading="lazy"
               className="h-full w-full object-cover"
             />

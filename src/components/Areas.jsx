@@ -3,13 +3,16 @@ import { pillars } from '../data/pillars'
 
 export default function Areas() {
   return (
-    <section id="areas" className="bg-white">
+    <section id="areas" aria-labelledby="areas-title" className="bg-white">
       <div className="mx-auto max-w-shell px-5 py-14 sm:px-6 md:py-24">
         <div className="mb-12 max-w-[640px]">
           <p className="mb-4 text-xs uppercase tracking-[0.16em] text-terracota">
             {areas.eyebrow}
           </p>
-          <h2 className="font-serif text-[clamp(30px,4.2vw,46px)] leading-[1.08] text-petrol">
+          <h2
+            id="areas-title"
+            className="font-serif text-[clamp(30px,4.2vw,46px)] leading-[1.08] text-petrol"
+          >
             {areas.title}
           </h2>
         </div>

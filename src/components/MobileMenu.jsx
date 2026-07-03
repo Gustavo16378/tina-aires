@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom'
-import { navLinks, site, whatsappMessages } from '../data/site'
+import { navLinks, site, whatsappMessages, whatsappAria } from '../data/site'
 import { buildWhatsAppLink } from '../utils/whatsapp'
 
 /**
@@ -57,6 +57,7 @@ export default function MobileMenu({ open, onClose }) {
       />
 
       <aside
+        id="mobile-menu"
         style={panelStyle}
         role="dialog"
         aria-modal="true"
@@ -78,7 +79,7 @@ export default function MobileMenu({ open, onClose }) {
               display: 'inline-flex',
             }}
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">
               <path d="M18 6 6 18M6 6l12 12" />
             </svg>
           </button>
@@ -109,6 +110,7 @@ export default function MobileMenu({ open, onClose }) {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleLinkClick}
+          aria-label={whatsappAria.geral}
           style={{
             marginTop: 'auto',
             backgroundColor: '#C2703D',

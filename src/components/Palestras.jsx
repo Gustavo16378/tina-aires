@@ -1,11 +1,12 @@
 import { palestras } from '../data/content'
-import { whatsappMessages } from '../data/site'
+import { whatsappMessages, whatsappAria } from '../data/site'
 import { buildWhatsAppLink } from '../utils/whatsapp'
 
 export default function Palestras() {
   return (
     <section
       id="palestras"
+      aria-labelledby="palestras-title"
       className="relative overflow-hidden bg-terracota text-white"
     >
       {/* Círculos decorativos */}
@@ -24,6 +25,7 @@ export default function Palestras() {
             strokeWidth="1.7"
             strokeLinecap="round"
             strokeLinejoin="round"
+            aria-hidden="true"
           >
             <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
             <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
@@ -35,7 +37,10 @@ export default function Palestras() {
           {palestras.eyebrow}
         </p>
 
-        <h2 className="mx-auto mb-5 max-w-[16em] font-serif text-[clamp(30px,5vw,52px)] leading-[1.06]">
+        <h2
+          id="palestras-title"
+          className="mx-auto mb-5 max-w-[16em] font-serif text-[clamp(30px,5vw,52px)] leading-[1.06]"
+        >
           {palestras.title}
         </h2>
 
@@ -56,6 +61,8 @@ export default function Palestras() {
                 <img
                   src={photo.src}
                   alt={photo.alt}
+                  width={photo.width}
+                  height={photo.height}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]"
                 />
@@ -80,6 +87,7 @@ export default function Palestras() {
           href={buildWhatsAppLink(whatsappMessages.palestra)}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={whatsappAria.palestra}
           className="inline-flex items-center gap-2.5 rounded-xl bg-petrol px-8 py-4 text-[15px] font-semibold text-cream shadow-[0_16px_34px_-14px_rgba(10,45,44,0.7)] transition-colors hover:bg-petrol-light"
         >
           {palestras.cta}
