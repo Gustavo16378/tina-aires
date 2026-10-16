@@ -40,7 +40,7 @@ export default function Sobre() {
           </div>
         </div>
 
-        {/* Imagem — exemplo (trocar pela foto real da Tina) */}
+        {/* Foto da Tina */}
         <div className="min-w-[280px] flex-1 basis-[320px]">
           <div className="aspect-[4/5] overflow-hidden rounded-[20px] bg-sage/30 shadow-[0_26px_52px_-30px_rgba(15,59,58,0.45)]">
             <img

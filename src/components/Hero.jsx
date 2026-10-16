@@ -53,7 +53,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Retrato — imagem de exemplo (trocar pela foto real da Tina) */}
+        {/* Retrato da Tina */}
         <div className="flex min-w-[280px] flex-1 basis-[300px] justify-center">
           <div className="relative w-[min(380px,80vw)]">
             <div className="absolute -inset-3.5 rounded-full border border-sage/45" />
